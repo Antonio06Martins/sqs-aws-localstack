@@ -1,0 +1,30 @@
+version: '3.0'
+
+services:
+
+  localstack:
+    image: localstack/localstack:latest
+    environment:
+      - AWS_DEFAULT_REGION=eu-central-1
+      - EDGE_PORT=4566
+      - SERVICES=sqs,sns
+    ports:
+      - '4566:4566'
+    volumes:
+      - "${TMPDIR:-/tmp/localstack}:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+#  postgres:
+#    image: 'postgres:9.6-alpine'
+#    volumes:
+#      - postgres-volume-sqs:/var/lib/postgresql/data-sqs
+#    ports:
+#      - "5432:5432"
+#    environment:
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: sqs123
+#      POSTGRES_DB: sqs
+#      POSTGRES_HOST: postgres
+#
+#  volumes:
+#    postgres-volume-sqs:
