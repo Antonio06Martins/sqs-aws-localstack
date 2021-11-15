@@ -91,7 +91,7 @@ aws --endpoint-url=http://localhost:4566 sns list-subscriptions
 
 * Execute o aplicativo usando `mvn spring-boot:run`
 
-* Iniciar a aplicação REVER ESTE PONTO
+* Iniciar a aplicação 
 
 * Executar as requisições para os endpoints do tipo **GET**:
 
