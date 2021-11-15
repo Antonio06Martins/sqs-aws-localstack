@@ -49,7 +49,7 @@ http://localhost:8080/create-order
 
 * No terminal, clone o projeto:
 ```
-git clone https://github.com
+git clone https://github.com/Antonio06Martins/sqs-aws-localstack.git
 ```
 
 * Com o Docker iniciado:
